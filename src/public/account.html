@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-container">
+            <h1 class="text-auth-h1">Добро пожаловать!</h1>
+            <p class="text-auth">
+                Мы знаем, как сложно найти аниме, которое зацепит с первой серии.  
+                Этот сайт подберёт аниме, идеально соответствующее твоему характеру и эмоциям.
+            </p>
+        </div>
+
+        <div class="form-wrapper">
+            <!-- Авторизация -->
+            <div class="auth-container">
+                <h1>Авторизация</h1>
+                <form class="auth-form auth-inputs">
+                    <div class="form-group">
+                        <input type="text" placeholder="Логин" class="input-field">
+                        <input type="password" placeholder="Пароль" class="input-field">
+                        <a href="#" class="forgot-password">Забыл пароль?</a>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="login-btn">Войти</button>
+                    </div>
+                    <div class="form-group">
+                        <p class="no-account">Нет аккаунта?</p>
+                        <button type="button" class="create-account-btn">Создать аккаунт</button>
+                    </div>
+                </form>
+            </div>
+        
+            <!-- Регистрация -->
+            <div class="register-container">
+                <h1>Регистрация</h1>
+                <form class="register-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Логин" id="username" name="username" class="input-field" required />
+                        <div id="username-error" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" id="email" name="email" class="input-field" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Пароль" id="password" name="password" class="input-field" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Повторите парольроль" id="confirm-password" name="confirm-password" class="input-field" required />
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                    <button type="button" class="login-account-btn">Назад</button>
+                </form>
+            </div>
+
+             <!-- Забыл пароль -->
+             <div class="forgot-container">
+                <h1>Смена пароля</h1>
+                <form class="forgot-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" id="forgot-email" name="email" class="input-field" required />
+                    </div>
+                    <button type="submit" class="forgot-submit-btn">Получить письмо</button>
+                    <button type="button" class="login-account-btn">Назад</button>
+                </form>
+            </div>
+            
+    </div> 
+    <script src="../server/controllers/forgot-password.js"></script>   
+    <script src="/js/account.js"></script>
+</body>
+</html>
+
+

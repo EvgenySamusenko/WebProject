@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки профиля</title>
+    <link rel="stylesheet" href="/css/profile-setting.css">
+</head>
+<body>
+    <div class="profile-settings-container">
+        <div class="sidebar">
+            <button class="tab-button active" data-tab="edit-profile">Редактировать профиль</button>
+            <button class="tab-button" data-tab="interface-settings">Настройки интерфейса</button>
+            <button class="tab-button" data-tab="recommendations">Настройки рекомендаций</button>
+            <button class="tab-button" data-tab="history">История взаимодействий</button>
+            <button class="tab-button" data-tab="security">Безопасность</button>
+            <button class="tab-button delete" data-tab="delete-account">Удалить аккаунт</button>
+        </div>
+        
+        <div class="content">
+            <div id="edit-profile" class="tab-content active">
+                <h2>Редактирование профиля</h2>
+                <div class="avatar-section">
+                    <img id="avatar-preview" src="default-avatar.png" alt="Аватар">
+                    <input type="file" id="avatar-upload" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label>Никнейм:</label>
+                    <input type="text" id="nickname" placeholder="Введите никнейм">
+                </div>
+
+                <div class="input-group">
+                    <label>Возраст:</label>
+                    <input type="number" id="age" min="1" max="100">
+                </div>
+
+                <div class="input-group">
+                    <label>Пол:</label>
+                    <select id="gender">
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                        <option value="other">Другой</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Основные эмоции:</label>
+                    <div class="checkbox-group emotions">
+                        <label><input type="checkbox" value="joy"> Радость</label>
+                        <label><input type="checkbox" value="sadness"> Грусть</label>
+                        <label><input type="checkbox" value="anger"> Злость</label>
+                        <label><input type="checkbox" value="anxiety"> Тревожность</label>
+                        <label><input type="checkbox" value="neutral"> Спокойствие</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Вы интроверт или экстраверт?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="introvert" value="introvert"> Интроверт</label>
+                        <label><input type="radio" name="introvert" value="extrovert"> Экстраверт</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Любимые жанры аниме:</label>
+                    <div class="checkbox-group genres">
+                        <label><input type="checkbox" value="shonen"> Сёнэн</label>
+                        <label><input type="checkbox" value="shoujo"> Сёдзё</label>
+                        <label><input type="checkbox" value="isekai"> Исекай</label>
+                        <label><input type="checkbox" value="mecha"> Меха</label>
+                        <label><input type="checkbox" value="horror"> Хоррор</label>
+                    </div>
+                </div>
+
+                <button id="save-button">Сохранить изменения</button>
+            </div>
+            <div id="interface-settings" class="tab-content">
+                <h2>Настройки интерфейса</h2>
+                <p>Выбор темы, размера шрифта и цветов.</p>
+            </div>
+            <div id="recommendations" class="tab-content">
+                <h2>Настройки рекомендаций</h2>
+                <p>Выбор любимых жанров и предпочтений.</p>
+            </div>
+            <div id="history" class="tab-content">
+                <h2>История взаимодействий</h2>
+                <p>Просмотренные аниме, оценки, избранное.</p>
+            </div>
+            <div id="security" class="tab-content">
+                <h2>Безопасность</h2>
+                <p>Изменение пароля и включение двухфакторной аутентификации.</p>
+            </div>
+            <div id="delete-account" class="tab-content">
+                <h2>Удаление аккаунта</h2>
+                <button id="delete-confirm">Подтвердить удаление</button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/profile-setting.js"></script>
+</body>
+</html>

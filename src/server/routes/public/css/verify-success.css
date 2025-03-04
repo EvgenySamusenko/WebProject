@@ -1,0 +1,47 @@
+body { 
+  font-family: Arial, sans-serif; 
+  text-align: center; 
+  margin: 0;
+  height: 100vh;
+  background-image: url('../image2/kartone.jpg');
+  background-size: cover; /* Для заполнения экрана */
+  background-repeat: no-repeat; /* Убираем повторение */
+  background-position: center; /* Центрируем изображение */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 700px;
+  height: 200px;
+  background-color: rgba(240, 248, 255, 0.9); /* Полупрозрачный цвет */
+  border-radius: 10px; /* Радиус для сглаживания углов */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для улучшения дизайна */
+  text-align: center; /* Центровка текста внутри контейнера */
+  padding: 20px;
+}
+
+
+h1 { 
+    color: #4CAF50; 
+}
+
+p { 
+  color: #555; 
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #45a049;
+}
